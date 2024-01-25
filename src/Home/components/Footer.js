@@ -4,10 +4,12 @@ export default function Footer() {
   return (
     <div>
       <center>
-      <Typography variant="h8" marginTop={4} style={{ fontSize: "16px", color: "white"}}>
-        <br/>
-        Copyright © 2024 Satoshi Miner Ltd.
-      </Typography>
+        <Typography variant="h8" sx={{
+          fontSize: "16px",
+          color: "white"
+        }}>
+          Copyright © 2024 Satoshi Miner Ltd.
+        </Typography>
       </center>
     </div>
   );

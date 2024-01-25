@@ -33,7 +33,7 @@ const CardWrapper = styled(Card)({
 
 const ButtonContainer = styled(Grid)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
-    flexDirection: "column",
+    flexDirection: "row",
     "> div": {
       marginLeft: 0,
       marginRight: 0,
@@ -312,8 +312,8 @@ export default function BakeCard() {
             </Box>
           </Box>
           {/* end admin zone */}
-          
-          <Typography variant="body1" fontWeight="bolder" sx={{ color: "white", paddingBottom: "10px"}} >Stake $SOL</Typography>
+
+          <Typography variant="body1" fontWeight="bolder" sx={{ color: "white", paddingBottom: "10px" }} >Stake $SOL</Typography>
           <Box>
             <PriceInput
               max={+walletSolBalance}
@@ -322,10 +322,10 @@ export default function BakeCard() {
             />
           </Box>
 
-          <Box marginTop={3} marginBottom={3}>
+          <Box marginTop={3} marginBottom={3} marginLeft={8} marginRight={8}>
             <Button
-              // variant="contained"
-              // fullWidth
+              variant="contained"
+              fullWidth
               disabled={!address || +bakeSOL === 0 || loading}
               onClick={bake}
               className="buy-button"
@@ -333,21 +333,58 @@ export default function BakeCard() {
               BUY SATS
             </Button>
           </Box>
-          <Divider />
+
+          {/* <Divider sx={{ color: "white" }} /> */}
+          <UnderlinedGrid />
+          {/* <UnderlinedGrid> */}
           <Grid
             container
             justifyContent="space-between"
             alignItems="center"
             mt={3}
           >
-            <Typography variant="body1" sx={{ color: "white" }} fontWeight="bolder" >
-              Your Rewards
-            </Typography>
-            <Typography variant="h5" sx={{ color: "white" }} fontWeight="bolder">
-              {beanRewards} SOL
-            </Typography>
+            <Typography variant="body1" sx={{ color: "white" }} fontWeight="bolder" >Your Rewards</Typography>
+            <Typography variant="h5" sx={{ color: "white" }} fontWeight="bolder">{beanRewards} SOL</Typography>
           </Grid>
-          <ButtonContainer container>
+          {/* </UnderlinedGrid> */}
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: "center",
+              marginTop: "20px",
+            }}
+          >
+            <Button
+              className="custom-button"
+              variant="contained"
+              sx={{ textTransform: "none !important", padding: "10px" }}
+              disabled={!address || loading}
+              onClick={reBake}
+            >
+              Compound
+            </Button>
+            <Button
+              className="custom-button"
+              variant="contained"
+              sx={{ textTransform: "none !important", padding: "10px" }}
+              disabled={!address || loading}
+              onClick={reBake}
+            >
+              Claim Rewards
+            </Button>
+            <Button
+              className="custom-button"
+              variant="contained"
+              sx={{ textTransform: "none !important", padding: "10px" }}
+              disabled={!address || loading}
+              onClick={reBake}
+            >
+              Satoshi Casino + Token
+            </Button>
+          </Box>
+          
+          {/* <ButtonContainer container>
             <Grid item flexGrow={1} marginRight={1} marginTop={3}>
               <Button
                 variant="contained"
@@ -357,7 +394,7 @@ export default function BakeCard() {
                 onClick={reBake}
                 className="custom-button"
               >
-                COMPOUND
+                Compound
               </Button>
             </Grid>
             <Grid item flexGrow={1} marginLeft={1} marginTop={3}>
@@ -369,10 +406,22 @@ export default function BakeCard() {
                 onClick={eatBeans}
                 className="custom-button"
               >
-                CLAIM REWARDS
+                Claim Rewards
               </Button>
             </Grid>
-          </ButtonContainer>
+            <Grid item flexGrow={1} marginLeft={1} marginTop={3}>
+              <Button
+                variant="contained"
+                color="secondary"
+                fullWidth
+                disabled={!address || loading}
+                // onClick={eatBeans}
+                className="custom-button"
+              >
+                Satoshi Casino + Token
+              </Button>
+            </Grid>
+          </ButtonContainer> */}
         </Box>
       </CardContent>
     </CardWrapper>

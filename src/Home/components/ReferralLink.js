@@ -6,13 +6,17 @@ import Button from "@mui/material/Button";
 import { styled } from "@mui/system";
 
 import { showToast } from "../../contracts/utils";
+import Box from "@mui/material/Box";
+
 const CardWrapper = styled(Card)({
   background: "transparent",
   border: "1px solid #555",
+  marginLeft: 24,
+  marginRight: 24,
 });
 
 const Input = styled("input")(({ theme }) => ({
-  fontSize: 10,
+  fontSize: 12,
   fontWeight: 300,
   padding: "10px 12px",
   borderRadius: 0,
@@ -33,33 +37,33 @@ export default function ReferralLink({ address }) {
   }
   return (
     <CardWrapper>
-
-      <CardContent className="fact">
-        <Typography gutterBottom sx={{ color: "black" }} variant="h5" textAlign="center">
+      <CardContent className="fact-1">
+        <Typography gutterBottom variant="h5" textAlign="center" sx={{ color: "black" }}>
           Referral Link
         </Typography>
-        <Input value={address ? link : ""} readOnly/>
-        <Button
-          variant="contained"
-          color="secondary"
-          fullWidth
-          onClick={copyToClipBoard}
-          className="custom-button"
-          marginTop={2}
-          style={{ marginTop: "5px" }}
+        <Input value={address ? link : ""} readOnly sx={{ color: "black", height: "50px" }} />
+        <Box marginTop={3} marginLeft={16} marginRight={16}>
+          <Button
+            variant="contained"
+            color="secondary"
+            fullWidth
+            onClick={copyToClipBoard}
+            className="copy-button"
+            sx={{ textTransform: "none !important", padding: "10px" }}
+          >
+            Copy To Clipboard
+          </Button>
+        </Box>
+        <Typography
+          textAlign="center"
+          variant="body2"
+          paddingX={6}
+          paddingY={2}
+          sx={{ color: "black", justifyContent: "center", fontSize: "16px" }}
         >
-          COPY TO CLIPBOARD
-        </Button>
+          Earn 10% of the SOL used to compound from anyone who uses your referral link
+        </Typography>
       </CardContent>
-      <Typography sx={{ color: "black" }}
-        textAlign="center"
-        variant="body2"
-        paddingX={3}
-        paddingY={2}
-      >
-        Earn 12% of the SOL used to compound from anyone who uses your
-        referral link
-      </Typography>
     </CardWrapper>
   );
 }

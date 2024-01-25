@@ -2,9 +2,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Metropolis', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Metropolis';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000000 !important;
@@ -15,10 +13,12 @@ code {
     monospace;
 }
 
-.MuiList-root {
-  
+.MuiList-root { font-family: -apple-system, BlinkMacSystemFont, 'Metropolis', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   background-color: #fcedbf !important;
 }
+
 .MuiDialogTitle-root {
   background-color: #cabd97 !important;
   color: 'white' !important;
@@ -40,18 +40,34 @@ code {
   border-radius: 5px !important;
 }
 
+.fact-1 {
+  background-color: #FEB100 !important;
+  border-radius: 1px !important;
+  padding-bottom: 5px !important;
+  /* color: #000000 !important; */
+}
+
 .custom-button {
-  background-color: #DC6E00 !important;
-  font-size: 20px !important;
-  color:white !important;
+  background-color: #FFC68D !important;
+  font-size: 18px !important;
+  color: #DC6E00 !important;
   border-radius: 12px !important;
+  width: 30%;
+  height: 64px;
   /* align-items: center; */
   /* min-width: 470px; */
 }
 
 .buy-button {
   background-color: #DC6E00 !important;
-  font-size: 20px !important;
+  font-size: 18px !important;
+  color:white !important;
+  border-radius: 12px !important;
+}
+
+.copy-button {
+  background-color: #000000 !important;
+  font-size: 18px !important;
   color:white !important;
   border-radius: 12px !important;
 }
