@@ -44,8 +44,8 @@ export default function ReferralLink({ address }) {
         <Input value={address ? link : ""} readOnly sx={{ color: "black", height: "50px" }} />
         <Box marginTop={3}
           sx={{
-            marginLeft: {xs: "50px !important", md: "120px !important", lg: "220px !important"},
-            marginRight: {xs: "50px !important", md: "120px !important", lg: "220px !important"},
+            marginLeft: {xs: "50px !important", md: "120px !important", lg: "150px !important"},
+            marginRight: {xs: "50px !important", md: "120px !important", lg: "150px !important"},
           }}
           marginLeft={16}
           marginRight={16}
