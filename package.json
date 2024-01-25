@@ -42,8 +42,8 @@
     "web3modal": "^1.9.7"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider GENERATE_SOURCEMAP=false && react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-script eject"
   },
