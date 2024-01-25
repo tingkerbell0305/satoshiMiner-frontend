@@ -42,13 +42,11 @@ export default function ReferralLink({ address }) {
           Referral Link
         </Typography>
         <Input value={address ? link : ""} readOnly sx={{ color: "black", height: "50px" }} />
-        <Box marginTop={3}
+        <Box
           sx={{
-            marginLeft: {xs: "50px !important", md: "120px !important", lg: "150px !important"},
-            marginRight: {xs: "50px !important", md: "120px !important", lg: "150px !important"},
+            marginTop: 2,
+            textAlign: "center"
           }}
-          marginLeft={16}
-          marginRight={16}
         >
           <Button
             variant="contained"
@@ -65,9 +63,9 @@ export default function ReferralLink({ address }) {
               backgroundColor: "#000000 !important",
               color: "#FFFFFF !important",
               borderRadius: "12px !important",
-              width: "70%",
+              width: {xs: "70%!important", md: "60%!important", lg: "50%!important"},
               height: {xs: "50px !important", md: "56px !important", lg: "64px !important"},
-              lineHeight: "19px !important"
+              lineHeight: "19px !important",
             }}
           >
             Copy To Clipboard

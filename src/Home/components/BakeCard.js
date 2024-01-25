@@ -349,10 +349,12 @@ export default function BakeCard() {
           {/* </UnderlinedGrid> */}
           <Box
             sx={{
-              display: 'flex',
+              display: "flex",
+              flexDirection: {xs: "column", md: "row", lg: "row"},
               justifyContent: 'space-between',
               alignItems: "center",
               marginTop: "20px",
+              gap: "8px"
             }}
           >
             <Button
@@ -363,11 +365,11 @@ export default function BakeCard() {
                 textTransform: "none !important", 
                 fontFamily: "'Metropolis', sans-serif !important",
                 padding: "10px",
-                fontSize: {xs: "14px !important", md: "18px !important", lg: "18px !important"},
+                fontSize: "18px !important",
                 backgroundColor: "#FFC68D !important",
                 color: "#DC6E00 !important",
                 borderRadius: "12px !important",
-                width: "30%",
+                width: "100%",
                 height: "64px",
               }}
               disabled={!address || loading}
@@ -382,11 +384,11 @@ export default function BakeCard() {
                 textTransform: "none !important", 
                 fontFamily: "'Metropolis', sans-serif !important",
                 padding: "10px",
-                fontSize: {xs: "14px !important", md: "18px !important", lg: "18px !important"},
+                fontSize: "18px !important",
                 backgroundColor: "#FFC68D !important",
                 color: "#DC6E00 !important",
                 borderRadius: "12px !important",
-                width: "30%",
+                width: "100%",
                 height: "64px",
               }}
               disabled={!address || loading}
@@ -401,11 +403,11 @@ export default function BakeCard() {
                 textTransform: "none !important", 
                 fontFamily: "'Metropolis', sans-serif !important",
                 padding: "10px",
-                fontSize: {xs: "16px !important", md: "18px !important", lg: "18px !important"},
+                fontSize: "18px !important",
                 backgroundColor: "#FFC68D !important",
                 color: "#DC6E00 !important",
                 borderRadius: "12px !important",
-                width: "30%",
+                width: "100%",
                 height: "64px",
                 lineHeight: "19px !important"
               }}
