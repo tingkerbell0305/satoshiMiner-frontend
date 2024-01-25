@@ -357,31 +357,62 @@ export default function BakeCard() {
           >
             <Button
               // className="bg-[#FFC68D] text-lg text-[#DC6E00] rounded-[12px] w-[30%] h-[auto]"
-              className="custom-button"
+              // className="custom-button"
               variant="contained"
-              sx={{ textTransform: "none !important", padding: "10px" }}
+              sx={{ 
+                textTransform: "none !important", 
+                fontFamily: "'Metropolis', sans-serif !important",
+                padding: "10px",
+                fontSize: {xs: "14px !important", md: "18px !important", lg: "18px !important"},
+                backgroundColor: "#FFC68D !important",
+                color: "#DC6E00 !important",
+                borderRadius: "12px !important",
+                width: "30%",
+                height: "64px",
+              }}
               disabled={!address || loading}
               onClick={reBake}
             >
               Compound
             </Button>
             <Button
-              className="custom-button"
+              // className="custom-button"
               variant="contained"
-              sx={{ textTransform: "none !important", padding: "10px" }}
+              sx={{ 
+                textTransform: "none !important", 
+                fontFamily: "'Metropolis', sans-serif !important",
+                padding: "10px",
+                fontSize: {xs: "14px !important", md: "18px !important", lg: "18px !important"},
+                backgroundColor: "#FFC68D !important",
+                color: "#DC6E00 !important",
+                borderRadius: "12px !important",
+                width: "30%",
+                height: "64px",
+              }}
               disabled={!address || loading}
-              onClick={reBake}
+              onClick={eatBeans}
             >
               Claim Rewards
             </Button>
             <Button
-              className="custom-button"
+              // className="custom-button"
               variant="contained"
-              sx={{ textTransform: "none !important", padding: "10px" }}
+              sx={{ 
+                textTransform: "none !important", 
+                fontFamily: "'Metropolis', sans-serif !important",
+                padding: "10px",
+                fontSize: {xs: "16px !important", md: "18px !important", lg: "18px !important"},
+                backgroundColor: "#FFC68D !important",
+                color: "#DC6E00 !important",
+                borderRadius: "12px !important",
+                width: "30%",
+                height: "64px",
+                lineHeight: "19px !important"
+              }}
               disabled={!address || loading}
               // onClick={reBake}
             >
-              Satoshi Casino + Token
+              Satoshi Casino +Token
             </Button>
           </Box>
           

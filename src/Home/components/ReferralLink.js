@@ -42,14 +42,33 @@ export default function ReferralLink({ address }) {
           Referral Link
         </Typography>
         <Input value={address ? link : ""} readOnly sx={{ color: "black", height: "50px" }} />
-        <Box marginTop={3} marginLeft={16} marginRight={16}>
+        <Box marginTop={3}
+          sx={{
+            marginLeft: {xs: "50px !important", md: "120px !important", lg: "220px !important"},
+            marginRight: {xs: "50px !important", md: "120px !important", lg: "220px !important"},
+          }}
+          marginLeft={16}
+          marginRight={16}
+        >
           <Button
             variant="contained"
-            color="secondary"
+            // color="secondary"
             fullWidth
             onClick={copyToClipBoard}
-            className="copy-button"
-            sx={{ textTransform: "none !important", padding: "10px" }}
+            // className="copy-button"
+            // sx={{ textTransform: "none !important", padding: "10px" }}
+            sx={{ 
+              textTransform: "none !important", 
+              fontFamily: "'Metropolis', sans-serif !important",
+              padding: "10px",
+              fontSize: {xs: "16px !important", md: "18px !important", lg: "18px !important"},
+              backgroundColor: "#000000 !important",
+              color: "#FFFFFF !important",
+              borderRadius: "12px !important",
+              width: "70%",
+              height: {xs: "50px !important", md: "56px !important", lg: "64px !important"},
+              lineHeight: "19px !important"
+            }}
           >
             Copy To Clipboard
           </Button>
