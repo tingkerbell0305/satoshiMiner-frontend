@@ -8,7 +8,7 @@ import { styled } from "@mui/system";
 
 const CardWrapper = styled(Card)({
   // background: "rgb(255 252 248)",
-  marginBottom: 24,
+  marginBottom: 36,
   marginLeft: 24,
   marginRight: 24,
   border: "1px solid #555",

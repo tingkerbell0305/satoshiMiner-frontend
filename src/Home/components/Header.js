@@ -36,33 +36,32 @@ const WalletButton = styled("div")(() => ({
 export default function Header() {
   return (
     <Wrapper>
-      <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "start", flexGrow: 1, marginLeft: "100px", marginRight: "50px" }}>
-        <a href="" style={{ color: "white", fontSize: "20px" }}>Gitbook</a>
-        <Grid container justifyContent="center" spacing={8}>
-          <Grid item>
-            <a href="https://t.me/orangefarmer" target="__blank">
-              <img src={tgIcon} alt="" width={34} height={30} />
-            </a>
-          </Grid>
-          <Grid item>
-            <a href="/" target="__blank">
-              <img src={twIcon} alt="" width={28} height={28} />
-            </a>
-          </Grid>
-        </Grid>
-        <WalletButton>
-          <MaterialUIWalletMultiButton variant="text" style={{
-            border: "2px solid #FCB117",
-            fontWeight: 700,
-            background: "transparent",
-            borderRadius: '43px',
-            color: 'white',
-            minWidth: "170px",
-            fontSize: '16px'
-          }} />
-        </WalletButton>
+      <div className="flex flex-row grow items-center justify-between mt-[20px] mx-[20px] sm:mx-[40px] md:mx-[70px]">
+        <a href="" className="text-white text-[14px] sm:text-[20px]">Gitbook</a>
+        {/* <div className="flex flex-row items-center justify-center gap-2"> */}
+        <a href="https://t.me/orangefarmer" target="__blank">
+          <img src={tgIcon} alt="" className="w-[24px] sm:w-[34px] h-[20px] sm:h-[30px]" />
+        </a>
+        <a href="/" target="__blank">
+          <img src={twIcon} alt="" className="w-[19px] sm:w-[28px] h-[19px] sm:h-[28px]" />
+        </a>
+        {/* </div> */}
+        <div className="text-sm md:text-lg">
+          <WalletButton>
+            <MaterialUIWalletMultiButton variant="text" style={{
+              border: "2px solid #FCB117",
+              fontWeight: 700,
+              background: "transparent",
+              borderRadius: '43px',
+              color: 'white',
+              display: "flex",
+              paddingLeft: 15,
+              paddingRight: 15
+            }} />
+          </WalletButton>
+        </div>
       </div>
-      <img src={logo} className="logo" alt="" style={{ marginTop: "30px", height: "188px", width: "85%" }} />
+      <img src={logo} className="mx-auto mt-[30px] sm:h-[160px] h-[auto] sm:w-[70%] w-[100vw]" />
       <hr />
       <Typography marginTop={1} style={{ color: "#FEB100", fontSize: "18px" }}>
         <b>Earn a daily income of up to 15% + 10% referral bonus.</b>

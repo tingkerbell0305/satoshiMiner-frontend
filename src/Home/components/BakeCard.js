@@ -27,7 +27,7 @@ import {
 const CardWrapper = styled(Card)({
   // background: "transparent",
   // backgroundColor: "white",
-  marginBottom: 24,
+  marginBottom: 2,
   // border: "1px solid #555",
 });
 
@@ -236,7 +236,7 @@ export default function BakeCard() {
           alignItems="center"
           mt={3}
         >
-          <Typography variant="body1" sx={{ color: "white" }} fontWeight="bolder">Total Value Locked</Typography>
+          <Typography variant="body1" sx={{ color: "white" }} fontWeight="bolder">TVL</Typography>
           <Typography variant="h5" sx={{ color: "white" }} >$ {Number(solPrice * Number(contractSolBalance)).toFixed(3)}</Typography>
         </UnderlinedGrid>
         <UnderlinedGrid
@@ -356,6 +356,7 @@ export default function BakeCard() {
             }}
           >
             <Button
+              // className="bg-[#FFC68D] text-lg text-[#DC6E00] rounded-[12px] w-[30%] h-[auto]"
               className="custom-button"
               variant="contained"
               sx={{ textTransform: "none !important", padding: "10px" }}
