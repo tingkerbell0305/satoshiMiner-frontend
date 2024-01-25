@@ -378,7 +378,7 @@ export default function BakeCard() {
               variant="contained"
               sx={{ textTransform: "none !important", padding: "10px" }}
               disabled={!address || loading}
-              onClick={reBake}
+              // onClick={reBake}
             >
               Satoshi Casino + Token
             </Button>
