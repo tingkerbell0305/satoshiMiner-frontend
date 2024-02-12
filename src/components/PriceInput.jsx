@@ -28,7 +28,6 @@ export default function PriceInput({ value, max, onChange = () => {} }) {
         min={0}
         max={max}
         value={value}
-        // color="white"
         onChange={(e) => onChange(e.target.value)}
       />
       <Typography
